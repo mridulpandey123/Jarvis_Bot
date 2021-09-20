@@ -1,34 +1,140 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- differentname:
+    use_entities: true
+- real_name:
+    use_entities: true
+- designation_name:
+    use_entities: true
+entities:
+- realname
+- designation
+slots:
+  designation:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  othername:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /affirm
+      title: YES
+    - payload: /deny
+      title: NO
+    - payload: /real_name
+      title: Different Name
+    text: |
+      "Welcome! You're now chatting with {VARUN OSWAL}"
+      "🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷"
+      "Namaskaar 🙏, Welcome to online verification of information received from  state office Lucknow."
+      "नमस्कार 🙏, राज्य कार्यालय लखनऊ से प्राप्त सूचना के ऑनलाइन सत्यापन में आपका स्वागत है|"
+      "Am I Chatting with {person_name}?"
+      "क्या मैं {person_name} के साथ चैट कर रहा हूँ?"
+  utter_bhajpaworker:
+  - buttons:
+    - payload: /affirm
+      title: YES
+    - payload: /deny
+      title: NO
+    text: |
+      "Are you a BJP worker ?"
+      "क्या आप भाजपा के कार्यकर्ता है ?"
+  utter_validation:
+  - buttons:
+    - payload: /affirm
+      title: YES
+    - payload: /deny
+      title: NO
+    text: |
+      "Are you working at Booth {Booth No and Name} of the post {Designation} in the Vidhan Sabha {Assembly No. & Name}?"
+      "क्या आप विधानसभा{विधानसभा सं और नाम} में पद{पदनाम} के बूथ {बूथ संख्या और नाम} पर कार्यरत हैं?"
+  utter_happy:
+  - text: Great, carry on!
+  utter_joinrequest:
+  - buttons:
+    - payload: /affirm
+      title: YES
+    - payload: /deny
+      title: NO
+    text: |
+      "Would you like to join BJP?"
+      "क्या आप बीजेपी में शामिल होना चाहते हैं?"
+  utter_tojoin:
+  - text: |
+      "To become a member of BJP, please call on 898080808.This is a toll-free number"
+      "भाजपा का सदस्य बनने के लिए कृपया ८९८०८०८०८ पर कॉल करें। यह एक टोल-फ्री नंबर है"
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_designation:
+  - text: |
+      "On which Designation are you working on ?"  
+      "आप किस पद पर कार्यरत हैं ?"
+  utter_smartphone:
+  - buttons:
+    - payload: /affirm
+      title: YES
+    - payload: /deny
+      title: NO
+    text: |
+      "Do you use smartphone ?"  
+      "क्या आप स्मार्टफोन का इस्तेमाल करते हैं ?"
+  utter_thankyou:
+  - text: |
+      "Thanks for the information, have a nice day.🙏 We will duly contact you on this number"  
+      "जानकारी के लए धन्यवाद,आप का दन शुभ हो|🙏 हम समय-समय पर आपसे इस नंबर पर संपर्क करेंगे|"
+  utter_thanks:
+  - text: |
+      "Thanks for the information, have a nice day.🙏"  
+      "जानकारी के लए धन्यवाद,आप का दन शुभ हो|🙏"
+  utter_differentname:
+  - text: |
+      "What is your real name?"  
+      "आपका सही नाम क्या है?"
+  utter_submit:
+  - text: |
+      "Done"  
+  utter_chatpossibility:
+  - text: |
+      "Can i talk to {person_name}?"  
+      "क्या मेरी बात{person_name} जी से हो सकती है ?"
+  utter_slots_values_designation:
+  - text: |
+      "Your Designation is: "  
+      - Designation: {designation}
+  utter_slots_values_realname:
+  - text: |
+      "Your Realname is: "  
+      - Realname: {realname}
+          
+  utter_askdesigantion:
+  - text: Please enter your designation_______
+  - text: कृपया अपना पदनाम दर्ज करें_______
+actions:
+- designation_form
+- realname_form
+- utter_askdesigantion
+forms:
+  designation_form:
+    required_slots: {}
+  realname_form:
+    required_slots: {}
+e2e_actions: []

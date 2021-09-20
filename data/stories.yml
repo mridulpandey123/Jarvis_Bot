@@ -1,30 +1,208 @@
 version: "2.0"
-
 stories:
-
-- story: happy path
+- story: path1 
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
   - intent: affirm
-  - action: utter_happy
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: affirm
+  - action: utter_smartphone
+  - intent: affirm
+  - action: utter_thankyou
 
-- story: sad path 2
+- story: path2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: affirm
+  - action: utter_smartphone
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_thankyou
+
+- story: path3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: deny
+  - action: utter_askdesigantion
+  - intent: designation_name
+    entities:
+    - designation: president
+  - slot_was_set:
+    - designation: president
+  - action: utter_slots_values_designation
+  - action: utter_smartphone
+  - intent: affirm
+  - action: utter_thankyou
+
+- story: path4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: deny
+  - action: utter_askdesigantion
+  - intent: designation_name
+    entities:
+    - designation: president
+  - slot_was_set:
+    - designation: president
+  - action: utter_slots_values_designation
+  - action: utter_smartphone
+  - intent: deny
+  - action: utter_thankyou
+
+- story: path5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_bhajpaworker
+  - intent: deny
+  - action: utter_joinrequest
+  - intent: affirm
+  - action: utter_tojoin
+- story: Story from Conversation ID 3b0701c8c09c4d44a05de85bbcd3e13f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_bhajpaworker
+  - intent: deny
+  - action: utter_joinrequest
+  - intent: deny
+  - action: utter_thanks
+
+- story: path6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_thanks
+- story: Story from Conversation ID 7482eeb3a7e542df8de6879e177d79c5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: affirm
+  - action: utter_smartphone
+  - intent: deny
+  - action: utter_thankyou
+
+- story: path7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: deny
+  - action: utter_joinrequest
+  - intent: deny
+  - action: utter_thanks
+
+- story: path8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: affirm
+  - action: utter_smartphone
+  - intent: affirm
+  - action: utter_thankyou
+
+- story: path9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: affirm
+  - action: utter_smartphone
+  - intent: deny
+  - action: utter_thankyou
+
+- story: path10
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: deny
+  - action: utter_askdesigantion
+  - intent: designation_name
+    entities:
+    - designation: president
+  - slot_was_set:
+    - designation: president
+  - action: utter_slots_values_designation
+  - action: utter_smartphone
+  - intent: deny
+  - action: utter_thankyou
+
+- story: path11
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: real_name
+  - action: utter_differentname
+  - intent: real_name
+    entities:
+    - realname: mridulpandey
+  - action: utter_bhajpaworker
+  - intent: affirm
+  - action: utter_validation
+  - intent: deny
+  - action: utter_askdesigantion
+  - intent: designation_name
+    entities:
+    - designation: president
+  - slot_was_set:
+    - designation: president
+  - action: utter_slots_values_designation
+  - action: utter_smartphone
+  - intent: affirm
+  - action: utter_thankyou
