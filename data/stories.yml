@@ -1,208 +1,51 @@
 version: "2.0"
 stories:
-- story: path1 
+- story: Story from Conversation ID cd2d2b6c751547cbb570271c5411c01b
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: affirm
-  - action: utter_smartphone
-  - intent: affirm
-  - action: utter_thankyou
-
-- story: path2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: affirm
-  - action: utter_smartphone
-  - intent: deny
-  - action: utter_thankyou
-
-- story: path3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: deny
-  - action: utter_askdesigantion
-  - intent: designation_name
+  - action: utter_ask_district_name
+  - intent: Kakching
+  - action: utter_kalkching
+  - intent: Kakching
     entities:
-    - designation: president
+    - vidhansabha: Hiyanglam
   - slot_was_set:
-    - designation: president
-  - action: utter_slots_values_designation
-  - action: utter_smartphone
-  - intent: affirm
-  - action: utter_thankyou
-
-- story: path4
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: deny
-  - action: utter_askdesigantion
-  - intent: designation_name
+    - vidhansabha: Hiyanglam
+  - action: utter_sector
+  - intent: S
+  - action: utter_askfeedback
+  - intent: J
     entities:
-    - designation: president
+    - feedback: we have less tourist spots
   - slot_was_set:
-    - designation: president
-  - action: utter_slots_values_designation
-  - action: utter_smartphone
+    - feedback: we have less tourist spots
+  - action: utter_newfeedback
   - intent: deny
-  - action: utter_thankyou
-
-- story: path5
-  steps:
-  - intent: greet
-  - action: utter_greet
+  - action: utter_askdateofbirth
+  - intent: dateofbith_entry
+    entities:
+    - dob: '25'
+    - dob: '2003'
+  - slot_was_set:
+    - dob: '2003'
+  - action: utter_askprofession
+  - intent: profession_entry
+    entities:
+    - feedback: i am type writer
+  - slot_was_set:
+    - feedback: i am type writer
+  - action: utter_thanks
+  - action: utter_newfeedback
   - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: deny
-  - action: utter_joinrequest
-  - intent: affirm
-  - action: utter_tojoin
-- story: Story from Conversation ID 3b0701c8c09c4d44a05de85bbcd3e13f
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_bhajpaworker
-  - intent: deny
-  - action: utter_joinrequest
+  - action: utter_sector
+  - intent: H
+  - action: utter_askfeedback
+  - intent: H
+    entities:
+    - feedback: less
+  - slot_was_set:
+    - feedback: less
+  - action: utter_newfeedback
   - intent: deny
   - action: utter_thanks
-
-- story: path6
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: deny
-  - action: utter_thanks
-- story: Story from Conversation ID 7482eeb3a7e542df8de6879e177d79c5
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: affirm
-  - action: utter_smartphone
-  - intent: deny
-  - action: utter_thankyou
-
-- story: path7
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: deny
-  - action: utter_joinrequest
-  - intent: deny
-  - action: utter_thanks
-
-- story: path8
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: affirm
-  - action: utter_smartphone
-  - intent: affirm
-  - action: utter_thankyou
-
-- story: path9
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: affirm
-  - action: utter_smartphone
-  - intent: deny
-  - action: utter_thankyou
-
-- story: path10
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: deny
-  - action: utter_askdesigantion
-  - intent: designation_name
-    entities:
-    - designation: president
-  - slot_was_set:
-    - designation: president
-  - action: utter_slots_values_designation
-  - action: utter_smartphone
-  - intent: deny
-  - action: utter_thankyou
-
-- story: path11
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: real_name
-  - action: utter_differentname
-  - intent: real_name
-    entities:
-    - realname: mridulpandey
-  - action: utter_bhajpaworker
-  - intent: affirm
-  - action: utter_validation
-  - intent: deny
-  - action: utter_askdesigantion
-  - intent: designation_name
-    entities:
-    - designation: president
-  - slot_was_set:
-    - designation: president
-  - action: utter_slots_values_designation
-  - action: utter_smartphone
-  - intent: affirm
-  - action: utter_thankyou

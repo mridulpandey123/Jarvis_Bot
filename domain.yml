@@ -13,128 +13,310 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- differentname:
+- dateofbith_entry:
     use_entities: true
-- real_name:
+- profession_entry:
     use_entities: true
-- designation_name:
+- A:
+    use_entities: true
+- S:
+    use_entities: true
+- D:
+    use_entities: true
+- F:
+    use_entities: true
+- G:
+    use_entities: true
+- H:
+    use_entities: true
+- J:
+    use_entities: true
+- K:
+    use_entities: true
+- L:
+    use_entities: true
+- U:
+    use_entities: true
+- vidhansabha_entry:
+    use_entities: true
+- Kakching:
+    use_entities: true
+- Imphal East:
+    use_entities: true
+- Sadar Hills:
+    use_entities: true
+- Churachandpur:
+    use_entities: true
+- Bishnupur:
+    use_entities: true
+- Senapati:
+    use_entities: true
+- Ukhrul:
+    use_entities: true
+- Imphal Central:
+    use_entities: true
+- Chandel:
+    use_entities: true
+- Thoubal:
+    use_entities: true
+- Imphal West:
+    use_entities: true
+- Tamenglong:
     use_entities: true
 entities:
-- realname
-- designation
+- dob
+- profession
+- feedback
+- vidhansabha
 slots:
-  designation:
+  feedback:
     type: rasa.shared.core.slots.UnfeaturizedSlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
-  othername:
+  dob:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  profession:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  vidhansabha:
     type: rasa.shared.core.slots.UnfeaturizedSlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
 responses:
-  utter_greet:
+  utter_sector:
   - buttons:
-    - payload: /affirm
-      title: YES
-    - payload: /deny
-      title: NO
-    - payload: /real_name
-      title: Different Name
+    - payload: Cultural Heritage
+      title: Cultural Heritage
+    - payload: Women empowerment
+      title: Women empowerment
+    - payload: Education
+      title: Education
+    - payload: Youth affairs / Sports
+      title: Youth affairs / Sports
+    - payload: Governance
+      title: Governance
+    - payload: Medical and Health
+      title: Medical and Health
+    - payload: Infrastructure
+      title: Infrastructure
+    - payload: Industries/ Startups/Tourism
+      title: Industries/ Startups/Tourism
+    - payload: Farming/ Agriculture / Animal Husbandry
+      title: Farming/ Agriculture / Animal Husbandry
+    - payload: OTHERS
+      title: OTHERS
     text: |
-      "Welcome! You're now chatting with {VARUN OSWAL}"
-      "🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷🌷"
-      "Namaskaar 🙏, Welcome to online verification of information received from  state office Lucknow."
-      "नमस्कार 🙏, राज्य कार्यालय लखनऊ से प्राप्त सूचना के ऑनलाइन सत्यापन में आपका स्वागत है|"
-      "Am I Chatting with {person_name}?"
-      "क्या मैं {person_name} के साथ चैट कर रहा हूँ?"
-  utter_bhajpaworker:
-  - buttons:
-    - payload: /affirm
-      title: YES
-    - payload: /deny
-      title: NO
-    text: |
-      "Are you a BJP worker ?"
-      "क्या आप भाजपा के कार्यकर्ता है ?"
-  utter_validation:
-  - buttons:
-    - payload: /affirm
-      title: YES
-    - payload: /deny
-      title: NO
-    text: |
-      "Are you working at Booth {Booth No and Name} of the post {Designation} in the Vidhan Sabha {Assembly No. & Name}?"
-      "क्या आप विधानसभा{विधानसभा सं और नाम} में पद{पदनाम} के बूथ {बूथ संख्या और नाम} पर कार्यरत हैं?"
-  utter_happy:
-  - text: Great, carry on!
-  utter_joinrequest:
-  - buttons:
-    - payload: /affirm
-      title: YES
-    - payload: /deny
-      title: NO
-    text: |
-      "Would you like to join BJP?"
-      "क्या आप बीजेपी में शामिल होना चाहते हैं?"
-  utter_tojoin:
-  - text: |
-      "To become a member of BJP, please call on 898080808.This is a toll-free number"
-      "भाजपा का सदस्य बनने के लिए कृपया ८९८०८०८०८ पर कॉल करें। यह एक टोल-फ्री नंबर है"
+      "Please select a relevant category in which you want to provide feedback."
+  utter_askfeedback:
+  - text: Please write your feedback.
+  utter_askdateofbirth:
+  - text: Please enter your Date Of Birth.
+  utter_askprofession:
+  - text: Please enter your Profession.
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_designation:
-  - text: |
-      "On which Designation are you working on ?"  
-      "आप किस पद पर कार्यरत हैं ?"
-  utter_smartphone:
-  - buttons:
-    - payload: /affirm
-      title: YES
-    - payload: /deny
-      title: NO
-    text: |
-      "Do you use smartphone ?"  
-      "क्या आप स्मार्टफोन का इस्तेमाल करते हैं ?"
-  utter_thankyou:
-  - text: |
-      "Thanks for the information, have a nice day.🙏 We will duly contact you on this number"  
-      "जानकारी के लए धन्यवाद,आप का दन शुभ हो|🙏 हम समय-समय पर आपसे इस नंबर पर संपर्क करेंगे|"
+  - text: I am a bot, powered by BJP.
   utter_thanks:
+  - text: Thank you for feedback for Future Manipur.🙏
+  utter_greet:
   - text: |
-      "Thanks for the information, have a nice day.🙏"  
-      "जानकारी के लए धन्यवाद,आप का दन शुभ हो|🙏"
-  utter_differentname:
-  - text: |
-      "What is your real name?"  
-      "आपका सही नाम क्या है?"
-  utter_submit:
-  - text: |
-      "Done"  
-  utter_chatpossibility:
-  - text: |
-      "Can i talk to {person_name}?"  
-      "क्या मेरी बात{person_name} जी से हो सकती है ?"
-  utter_slots_values_designation:
-  - text: |
-      "Your Designation is: "  
-      - Designation: {designation}
-  utter_slots_values_realname:
-  - text: |
-      "Your Realname is: "  
-      - Realname: {realname}
-          
-  utter_askdesigantion:
-  - text: Please enter your designation_______
-  - text: कृपया अपना पदनाम दर्ज करें_______
+      Hi!
+      Please share your feedback to build Manipur a developed and prosperous state.
+  utter_newfeedback:
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: |
+      "would you like to  provide another feedback."      
+  utter_bishnupur:
+  - buttons:
+    - payload: Chingai
+      title: Chingai
+    - payload: Phungyar
+      title: Phungyar
+    - payload: Ukhrul
+      title: Ukhrul
+    text: |
+      Select your Assembly Constituent. 
+  utter_ask_district_name:
+  - buttons:
+    - payload: Bishnupur
+      title: Bishnupur
+    - payload: Chandel
+      title: Chandel
+    - payload: Churachandpur
+      title: Churachandpur
+    - payload: Imphal Central
+      title: Imphal Central
+    - payload: Imphal East
+      title: Imphal East
+    - payload: Kakching
+      title: Kakching
+    - payload: Sadar Hills
+      title: Sadar Hills
+    - payload: Senapati
+      title: Senapati
+    - payload: Tamenglong
+      title: Tamenglong
+    - payload: Thoubal
+      title: Thoubal
+    - payload: Ukhrul
+      title: Ukhrul
+    text: |
+      Please select your District Name.
+  utter_Churachandpur:
+  - buttons:
+    - payload: Churachandpur
+      title: Churachandpur
+    - payload: Henglep
+      title: Henglep
+    - payload: Saikot
+      title: Saikot
+    - payload: Singhat
+      title: Singhat
+    - payload: Thanlon
+      title: Thanlon
+    - payload: Tipaimukh
+      title: Tipaimukh
+    text: |
+      Select your Assembly Constituent.
+  utter_imphalcentral:
+  - buttons:
+    - payload: Keishamthong
+      title: Keishamthong
+    - payload: Sagolband
+      title: Sagolband
+    - payload: Singjamei
+      title: Singjamei
+    - payload: Thangmeiband
+      title: Thangmeiband
+    - payload: Uripok
+      title: Uripok
+    - payload: Wangkhei
+      title: Wangkhei
+    - payload: Yaiskul
+      title: Yaiskul
+    text: |
+      Select your Assembly Constituent.
+  utter_imphaleast:
+  - buttons:
+    - payload: Andro
+      title: Andro
+    - payload: Heingang (GEN)
+      title: Heingang (GEN)
+    - payload: Singjamei
+      title: Singjamei
+    - payload: Keirao
+      title: Keirao
+    - payload: Khundrakpam (GEN)
+      title: Khundrakpam (GEN)
+    - payload: Khurai (GEN)
+      title: Khurai (GEN)
+    - payload: Lamlai
+      title: Lamlai
+    - payload: Thongju
+      title: Thongju
+    text: |
+      Select your Assembly Constituent.
+  utter_imphalwest:
+  - buttons:
+    - payload: Jiribam
+      title: Jiribam
+    - payload: Konthoujam
+      title: Konthoujam
+    - payload: Lamsang
+      title: Lamsang
+    - payload: Langthabal
+      title: Langthabal
+    - payload: Mayang imphal
+      title: Mayang imphal
+    - payload: Naoriya pakhanglakpa
+      title: Naoriya pakhanglakpa
+    - payload: Patsoi
+      title: Patsoi
+    - payload: Sekmai
+      title: Sekmai
+    - payload: Wangoi
+      title: Wangoi
+    text: |
+      Select your Assembly Constituent.
+  utter_kalkching:
+  - buttons:
+    - payload: Hiyanglam
+      title: Hiyanglam
+    - payload: Kakching
+      title: Kakching
+    - payload: Sugnu
+      title: Sugnu
+    - payload: Wabgai
+      title: Wabgai
+    text: |
+      Select your Assembly Constituent.
+  utter_Sadar_hills:
+  - buttons:
+    - payload: Kangpokpi (Gen)
+      title: Kangpokpi (Gen)
+    - payload: Saikul
+      title: Saikul
+    - payload: Saitu
+      title: Saitu
+    text: |
+      Select your Assembly Constituent.
+  utter_senapati:
+  - buttons:
+    - payload: Karong
+      title: Karong
+    - payload: Mao
+      title: Mao
+    text: |
+      Select your Assembly Constituent.
+  utter_Thoubal:
+  - buttons:
+    - payload: Heirok
+      title: Heirok
+    - payload: Khangabok
+      title: Khangabok
+    - payload: Lilong
+      title: Lilong
+    - payload: Thoubal
+      title: Thoubal
+    - payload: Wangjing tentha
+      title: Wangjing tentha
+    - payload: Wangkhem
+      title: Wangkhem
+    text: |
+      Select your Assembly Constituent.
+  utter_Tamenglong:
+  - buttons:
+    - payload: Nungba
+      title: Nungba
+    - payload: Tamei
+      title: Tamei
+    text: |
+      Select your Assembly Constituent.
+  utter_Ukhrul:
+  - buttons:
+    - payload: Chingai
+      title: Chingai
+    - payload: Phungyar
+      title: Phungyar
+    - payload: Ukhrul
+      title: Ukhrul
+    text: |
+      Select your Assembly Constituent.
 actions:
-- designation_form
-- realname_form
-- utter_askdesigantion
+- validate_vidhansabha_form
 forms:
-  designation_form:
-    required_slots: {}
-  realname_form:
-    required_slots: {}
+  vidhansabha_form:
+    required_slots:
+      vidhansabha:
+      - type: from_text
 e2e_actions: []

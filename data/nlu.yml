@@ -19,46 +19,374 @@ nlu:
     - goodevening
     - good afternoon
     - .
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - /affirm
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - /deny
+    - Hi
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
-    - am I talking to a human?
-- intent: designation_name
+- intent: Kakching
   examples: |
-    - I am [president](designation)
-    - [secreatery](designation)
-    - [prime minister](designation)
-    - i am [vicepresident](designation)
-    - i am vice [president](designation)
-- intent: real_name
+    - [Wabgai](vidhansabha)
+    - Kakching
+    - [Hiyanglam](vidhansabha)
+    - kaKCHING
+    - KAkching
+    - kaakchinG
+    - KAakCHinG
+    - KAAKCHING
+    - KAKCHNG
+    - KAKCHING
+    - Hiyanglam
+    - Sugnu
+    - Wabgai
+    - kalkching
+- intent: Chandel
   examples: |
-    - [aditya](realname)
-    - [rajeev ratan](realname)
-    - [sundar kala](realname)
-    - i am [mridul](realname)
-    - /differentname
-    - i am [mridulpandey](realname)
-- intent: differentname
+    - Chandel
+    - Tengnoupal
+    - chandel
+    - CHANDEL
+    - CHandel
+    - chanDEL
+    - ChAnDeL
+- intent: dateofbith_entry
   examples: |
-    - varun oswal
+    - [04/09/2008](dob)
+    - [29/9/2000](dob)
+    - [august 23 1999](dob)
+    - [24/12/2009](dob)
+    - [09/8/2012](dob)
+    - [09](dob) [august 2000](dob)
+    - [05/09/2008](dob)
+    - [6](dob) sep [2012](dob)
+    - [8/12/1999](dob)
+    - [09/12/1999](dob)
+    - [25](dob) jan [2003](dob)
+    - [2003](dob), january [34](dob)
+- intent: profession_entry
+  examples: |
+    - [student](profession)
+    - [farmer](profession)
+    - [arist](profession)
+    - [actor](profession)
+    - [government worker](profession)
+    - i am [student](profession)
+    - [i am professor](profession)
+    - [i am astronout](profession)
+    - [i am carpenter](profession)
+    - [i am type writer](feedback)
+- intent: L
+  examples: |
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: K
+  examples: |
+    - Women empowerment
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+    - [we want](feedback) employement
+- intent: J
+  examples: |
+    - Education
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+    - [we have less tourist spots](feedback)
+- intent: H
+  examples: |
+    - Youth affairs / Sports
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+    - [less](feedback) innovation
+- intent: G
+  examples: |
+    - Governance
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: F
+  examples: |
+    - Medical and Health
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: D
+  examples: |
+    - Infrastructure
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: S
+  examples: |
+    - Industries/ Startups/Tourism
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: A
+  examples: |
+    - Farming/ Agriculture / Animal Husbandry
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: U
+  examples: |
+    - OTHERS
+    - [Cultural Heritage is missing](feedback)
+    - [we want justice](feedback)
+    - [medical issues](feedback)
+    - [youth opportunity missing](feedback)
+    - [we farmer need more money](feedback)
+    - [women injustice](feedback)
+    - [we have water shortage](feedback)
+    - [we want better infra](feedback)
+    - [we want free wifi in our houses](feedback)
+    - [more sports stadium required](feedback)
+    - [museums are needed](feedback)
+    - [tourism should be promoted](feedback)
+    - [agro tech firms required](feedback)
+- intent: affirm
+  examples: |
+    - Yes
+- intent: deny
+  examples: |
+    - No
+- intent: Bishnupur
+  examples: |
+    - bishnupur
+    - bishupur
+    - BISHNUPUR
+    - biSHNUpUR
+    - BISHNHU PUR
+    - Bishnupur
+    - Kumbi
+    - Moirang
+    - Nambol
+    - Oinam
+    - Thanga
+- intent: Churachandpur
+  examples: |
+    - CHURACHANDPUR
+    - churachandpur
+    - Churachandpur
+    - cHurAcHAndPur
+    - cHURACHANDPUR
+    - churachandpr
+    - chchurachandpur
+    - chura chand pur
+    - Henglep
+    - Saikot
+    - Singhat
+    - Thanlon
+    - Tipaimukh
+- intent: Imphal Central
+  examples: |
+    - imphal central
+    - Imphal Central
+    - centralimphal
+    - imphalcentral
+    - imphalCENTRAL
+    - Keishamthong
+    - Sagolband
+    - Singjamei
+    - Thangmeiband
+    - Uripok
+    - Wangkhei
+    - Yaiskul
+    - CENTRALimphal
+    - imphal CENTRAL
+- intent: Imphal East
+  examples: |
+    - imphaleast
+    - imphalEast
+    - Andro
+    - Heingang (GEN)
+    - Keirao
+    - Khundrakpam (GEN)
+    - Khurai (GEN)
+    - Kshetrigao
+    - Lamlai
+    - Thongju
+    - imphALleast
+    - IMphaleasT
+    - impHALEASt
+    - IMPHALeast
+    - EASTimphal
+    - imphalEAST
+    - IMPHALeaST
+    - Imphal East
+- intent: Imphal West
+  examples: |
+    - westIMPhal
+    - IMPHALWEST
+    - imphalWEST
+    - imphal WEST
+    - WEST imphal
+    - imphalwest
+    - imPHALWST
+    - imphalwEST
+    - Jiribam
+    - Konthoujam
+    - Lamsang
+    - Langthabal
+    - Mayang imphal
+    - Naoriya pakhanglakpa
+    - Patsoi
+    - Sekmai
+    - Wangoi
+- intent: Sadar Hills
+  examples: |
+    - sadarhills
+    - SADARhills
+    - saDARhills
+    - sadar HILLS
+    - Kangpokpi (Gen)
+    - Saikul
+    - Saitu
+- intent: Senapati
+  examples: |
+    - SENAPATI
+    - senapati
+    - SEnaPatii
+    - shena pati
+    - sena pati
+    - senaa pati
+    - sena patee
+    - shena pathi
+    - Karong
+    - Mao
+    - Tadubi
+- intent: Tamenglong
+  examples: |
+    - tamenglong
+    - temenglong
+    - teman glong
+    - temanglong
+    - temelong
+    - Nungba
+    - Tamei
+    - Tamenglong
+- intent: Thoubal
+  examples: |
+    - tobal
+    - thobal
+    - thouball
+    - thobaal
+    - thoubaal
+    - thow bal
+    - thowball
+    - Heirok
+    - Khangabok
+    - Lilong
+    - Thoubal
+    - Wangjing tentha
+    - Wangkhem
+- intent: Ukhrul
+  examples: |
+    - ukhrul
+    - ukhruul
+    - ukhrUL
+    - UKhruL
+    - UKRUL
+    - ukrull
+    - ukhrule
+    - ookhrule
+    - Chingai
+    - Phungyar
+    - Ukhrul
+- intent: nlu_fallback
+  examples: |
+    - [water shortage](feedback)
